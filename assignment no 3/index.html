@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"
+        defer></script>
+    <link href="bootstrap/js/bootstrap.min.js" rel="stylesheet" media="screen">
+    <link href="bootstrap/js/bootstrap-modal.js" rel="stylesheet" media="screen">
+    <link href="bootstrap/js/bootstrap-transition.js" rel="stylesheet" media="screen">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
+        defer></script>
+
+    <style>
+        body {
+            color: #212529;
+        }
+
+        .para {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .heading {
+            font-weight: bold;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+
+        .logo-img {
+            height: 2.5rem;
+        }
+
+        .banner,
+        .modal-title {
+            background-color: #E9ECEF;
+        }
+
+        .modal-body .para {
+            font-size: 14px;
+            line-height: 20px;
+
+        }
+
+        .cross{
+            text-decoration: none;
+            color: #212529;
+        }
+    </style>
+
+    <title>Assignment-3</title>
+</head>
+
+<body>
+    <section class="container banner p-5">
+        <div class="logo navbar-brand pb-3">
+            <img class="logo-img align-top" src="logo.png">
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <h6 class="heading">COVID-19<br>Screening Tool</h6>
+                <p class="para">Use this self assesment to determine whether you need to be tested for
+                    COVID-19.<br><br>You can complete this assesment for yourself or on behalf of someone else, if they
+                    are not able</p>
+            </div>
+            <div class="col-4 mt-4">
+                <img src="covid19screen.png" height="max-content" width="100%">
+            </div>
+        </div>
+        <div class="d-grid">
+            <button type="button" class="btn btn-primary btn-lg btn-block" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop-4">Start Screening</button>
+        </div>
+    </section>
+
+    <section class="information container p-5">
+        <h6 class="heading mb-4">More Information</h6>
+
+        <div class="row" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1">
+            <div class="col-3">
+                <img src="virus.png" alt="" height="50px">
+            </div>
+            <div class="col-8">
+                <strong class="heading">
+                    What is COVID-19?
+                </strong>
+                <p class="para">
+                    Coronavirus disease (COVID-19) is an infectious disease...
+                </p>
+            </div>
+            <div class="col-1">
+                <i class="fa fa-chevron-right">
+                </i>
+            </div>
+        </div>
+        <hr>
+        <div class="row" data-bs-toggle="modal" data-bs-target="#staticBackdrop-2">
+            <div class="col-3">
+                <img src="symptoms.png" alt="" height="50px">
+            </div>
+            <div class="col-8">
+                <strong class="heading">
+                    What are its<br>Symptoms
+                </strong>
+                <p class="para">
+                    The COVID-19 virus affects different people in different ways...
+                </p>
+            </div>
+            <div class="col-1">
+                <i class="fa fa-chevron-right">
+                </i>
+            </div>
+        </div>
+        <hr>
+        <div class="row" data-bs-toggle="modal" data-bs-target="#staticBackdrop-3">
+            <div class="col-3">
+                <img src="prevent.png" alt="" height="50px">
+            </div>
+            <div class="col-8">
+                <strong class="heading">
+                    How can you prevent it?
+                </strong>
+                <p class="para">
+                    There is currently no vaccine to prevent Coronavirus disease
+                </p>
+            </div>
+            <div class="col-1">
+                <i class="fa fa-chevron-right">
+                </i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="staticBackdrop-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <h6 class="heading pt-3">COVID-19</h6>
+
+                    <p class="para">Coronavirus disease(COVID-19)is an infectious
+                        disease caused byanew virus.
+                        The disease causes respiratory illness(like the
+                        flu)with symptoms such asacough,fever,and
+                        in more severe cases,difficulty breathing.You
+                        can protect yourself by washing your hands
+                        frequently,avoiding touching your face,and
+                        avoiding close contact(1meter or3feet)with
+                        people who are unwell.</p>
+
+                    <strong>How it spreads</strong>
+
+                    <p class="para">
+                        Coronavirus disease spreads primarily through
+                        contact with an infected person when they
+                        cough or sneeze.It also spreads whenaperson
+                        touchesasurface or object that has the virus
+                        on it,then touches their eyes,nose,or mouth.
+                        <br><br>Learn more on who.int→
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="staticBackdrop-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <h6 class="heading pt-3">Symptoms</h6>
+
+                    <p class="para">The COvID-19 vius affects different people in
+                        different ways COVID-19 History
+                        disease and most infected people will develop
+                        mild to moderate symptoms and recover
+                        without requiring special treatment People
+                        who have underlying medical conditions and
+                        those over 60 years old haveahigher risk of
+                        developing severe disease and death</p>
+
+                    <strong>Common symptoms include</strong>
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col-3">
+                            <img src="./fever.png" alt="" height="50px">
+                        </div>
+                        <div class="col-8">
+
+                            <p class="para">
+                                Fever and body aches
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="./drycough.png" alt="" height="50px">
+                        </div>
+                        <div class="col-8">
+
+                            <p class="para">
+                                Dry Cough
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="./tirdeness.png" alt="" height="50px">
+                        </div>
+                        <div class="col-8">
+
+                            <p class="para">
+                                Tirdeness
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <strong>other symptoms include</strong>
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="./chest.png" alt="" height="50px">
+                        </div>
+                        <div class="col-8">
+
+                            <p class="para">
+                                Pains and aches
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="./thorat.png" alt="" height="50px">
+                        </div>
+                        <div class="col-8">
+
+                            <p class="para">
+                                Sore Throat
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="staticBackdrop-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <h6 class="heading pt-3">Prevention</h6>
+
+                    <p class="para">
+                        There's currently no vaccine to provent
+                        coronavirus disease(COVID-19),You can
+                        protect yourself and help prevent spreading the
+                        virus to others if you do the following
+                    </p>
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col-3">
+                            <img src="./hands.png" alt="" height="50px">
+                        </div>
+                        <div class="col-9">
+
+                            <p class="para">
+                                Wash your hands regularly with soap and water or clean them with alcohol based handrub.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="./distance.png" alt="" height="50px">
+                        </div>
+                        <div class="col-9">
+
+                            <p class="para">
+                                Maintain alteast 1 meter distance between you and people coughing or sneezing.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="./away.png" alt="" height="50px">
+                        </div>
+                        <div class="col-9">
+
+                            <p class="para">
+                                To help prevent from infections, keep your hands away from your eyes, nose and mouth.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col-3">
+                            <img src="./cover.png" alt="" height="50px">
+                        </div>
+                        <div class="col-9">
+
+                            <p class="para">
+                                Cover your mouth and nose when coughing or sneezing.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="./home.png" alt="" height="50px">
+                        </div>
+                        <div class="col-9">
+                            <p class="para">
+                                Stay home if you feel unwell. Staying home right now isn't about keeping you and your
+                                family safe - It's about saving the lives of the others
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="./lungs.png" alt="" height="50px">
+                        </div>
+                        <div class="col-9">
+                            <p class="para">
+                                Refrain from smoking.
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="staticBackdrop-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Do you have fever above 101.4?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="fever.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-5">Yes I do</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I don't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade" id="staticBackdrop-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Do you have a Cough - (Dry Cough)?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="drycough.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-6">Yes I do</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I don't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 6 -->
+    <div class="modal fade" id="staticBackdrop-6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Do you have a Cough - (Wet Cough)?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="cough.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-7">Yes I do</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I don't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div class="modal fade" id="staticBackdrop-7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Do you have Shortness of breath?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="breath.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-8">Yes I do</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I don't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div class="modal fade" id="staticBackdrop-8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Do you have a flu?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="flu.png" style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-9">Yes I do</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I don't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9 -->
+    <div class="modal fade" id="staticBackdrop-9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Have you travelled abroad in last 15
+                        days?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="plane.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-10">Yes I have</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I didn't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10 -->
+    <div class="modal fade" id="staticBackdrop-10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Do you been in contact with a person who
+                        has recently travelled abroad?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="tourist.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-11">Yes I have</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I haven't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 11 -->
+    <div class="modal fade" id="staticBackdrop-11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Do you have a Chest Infection?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="chest.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-12">Yes I do</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I don't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 12 -->
+    <div class="modal fade" id="staticBackdrop-12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Is your age more than or equal to 60 years of age?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="age.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-13">Yes</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 13 -->
+    <div class="modal fade" id="staticBackdrop-13" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">Due to Co-morbidities, do you take any medicine?</h6>
+
+                    <div class="img-container mt-5 pt-5" style="display: flex;">
+                        <img src="medicine.png"
+                            style="display: block; margin-left: auto; margin-right: auto; height: 200px">
+                    </div>
+
+                    <div class="d-grid mt-5 pt-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mb-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-14">Yes I do</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">No I don't</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 11 -->
+    <div class="modal fade" id="staticBackdrop-14" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#E9ECEF; height: 2.8rem; z-index: 20;">
+
+                    <div class="logo navbar-brand pb-3" style="margin-top: 50px;">
+                        <img class="logo-img align-top" src="logo.png">
+                    </div>
+                    <a href="index.html" class="cross"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
+                </div>
+                <div class="modal-body p-4">
+
+                    <h6 class="heading pt-3 pl-3 pr-3" style="font-size: 20px;">High Probability of corona</h6>
+
+                    <p class="para">1. Isolate from others.</p>
+                    <p class="para">2. Rest and take care.</p>
+                    <p class="para">3. Call Work Health Providers.</p>
+                    <p class="para">4. Monitor  Symptoms.</p>
+                    <p class="para">5. Talk to someone about testing.</p>
+                    <p class="para">6. Follow Govt. Instructions</p>
+                    <br><br>
+                    <p class="para">As of now your answers suggest that you may
+                        need testing anything changes,take the
+                        questionnaire again.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
